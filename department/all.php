@@ -1,4 +1,4 @@
-
+<?php include '../isLoggedIn.php' ?>
 <?php include '../connection.php' ?>
 <?php 
     $s = "SELECT * from departments";

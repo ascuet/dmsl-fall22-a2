@@ -1,3 +1,4 @@
+<?php include 'isLoggedIn.php' ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +9,8 @@
 </head>
 <body>
     <div>
-        <h2>Create Course</h2>
+        <h2>Dashboard</h2>
+        <p>This is the dashboard page</p>
     </div>
 </body>
 </html>

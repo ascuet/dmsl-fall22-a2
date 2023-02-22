@@ -1,4 +1,4 @@
-
+<?php include '../isLoggedIn.php' ?>
 <?php include '../connection.php' ?>
 <?php 
     $s = "SELECT courses.*, departments.name as dept_name from courses INNER JOIN departments ON courses.department_id=departments.dept_id";
@@ -32,6 +32,7 @@
                 <th>Credit</th>
                 <th>Type</th>
                 <th>Department</th>
+                <th>Action</th>
             </thead>
             <tbody>
                 <?php  
@@ -42,6 +43,10 @@
                             <td><?php echo $row['credit'] ?></td>
                             <td><?php echo $row['type'] ?></td>
                             <td><?php echo $row['dept_name'] ?></td>
+                            <td>
+                                <a href="edit.php?course-code=<?php echo $row['course_id'] ?>" class="btn-xs btn-primary">Edit</a>
+                                <a href="delete.php?course-code=<?php echo $row['course_id'] ?>" class="btn-xs btn-danger">Delete</a>
+                            </td>
                         </tr>
                     <?php }
                 ?>
